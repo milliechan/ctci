@@ -55,11 +55,34 @@ function checkPermutation(string, string2) {
   }
 }
 
-console.log(checkPermutation("abc", "bac"))
-console.log(checkPermutation("abc", "ccc"))
+// console.log(checkPermutation("abc", "bac"))
+// console.log(checkPermutation("abc", "ccc"))
 
 
 
 // 1.3 URLify: Write a method to replace all spaces in a string with '%20'. You may assume that the string has sufficient space at the end to hold additional characters, and that you are given the "true" length of the string. 
 // ex: input: "Mr John Smith    ", 13 
 // ex: output: "Mr%20John%20Smith"
+// split into array
+//  delete empty strings from array 
+// join array into string with "%20"
+
+function URLify(string) {
+  let arr = string.split(' '); 
+  arr = arr.filter(item => item != '');
+  return arr.join('%20');
+}
+
+// console.log(URLify("Mr John Smith   "))
+
+
+
+
+
+
+
+
+
+
+
+
