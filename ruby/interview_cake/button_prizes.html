@@ -2,6 +2,7 @@
 <button id="btn-1">Button 2!</button>
 <button id="btn-2">Button 3!</button> 
 
+<!-- one solution using closures -->
 <script type="text/javascript">
   var prizes = ['A Unicorn!', 'A Hug!', 'Fresh Laundry!'];
   for (var btnNum = 0; btnNum < prizes.length; btnNum++) {
@@ -11,4 +12,20 @@
       };
     }(btnNum); // passing btnNum to our anonymous function 
   }
+
+
+</script>
+
+<!-- another solution -->
+<script type="text/javascript">
+  var prizes = ['A Unicorn!', 'A Hug!', 'Fresh Laundry!'];
+  var addPrizes = function(val){
+    document.getElementById('btn-' + val).onclick = function() {
+      alert(prizes[val]);
+    }
+  }
+  for(var btnNum = 0; btnNum < prizes.length; btnNum++) {
+    addPrizes(btnNum);
+  }
+
 </script>
