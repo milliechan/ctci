@@ -88,6 +88,8 @@ def greedy_solution(arr)
     product_so_far *= arr[i]
     i += 1 
   end
+  puts "before:"
+  p product_of_all
 
   # get prod of integers after each index; store total product of all other ints 
 
